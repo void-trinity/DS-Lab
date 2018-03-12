@@ -100,7 +100,7 @@ void display()
 
 void size()
 {
-    int size = front == -1 ? 0 : front-rear+1;
+    int size = front == -1 ? 0 : rear-front+1;
     printf("\nSize: %d", size);
 }
 
