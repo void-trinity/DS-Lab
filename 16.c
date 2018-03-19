@@ -101,12 +101,12 @@ if(start==NULL)
 printf("\nUnderflow");
 else
 {
-item=start->data;
 struct node* tmp;
  tmp=start;
  while(tmp->forw!=NULL){
      tmp=tmp->forw;
  }
+    item=tmp->data;
 tmp->backw->forw=NULL;
 tmp->backw=NULL;
 }
