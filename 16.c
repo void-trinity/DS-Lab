@@ -51,7 +51,7 @@ struct node* ptr=(struct node*)malloc(sizeof(struct node));
  }
      tmp->forw=ptr;
      ptr->backw=tmp;
-    
+
  }
 // printf("\nItem %d Inserted",item);
 }
@@ -85,8 +85,15 @@ void insertNode(){
 }
 void deleteBeg(){
 int item;
-if(start==NULL)
+if(start==NULL){
 printf("\nUnderflow");
+return;
+}
+else if(start->forw==NULL)
+{
+    item=start->data;
+start=NULL;
+}
 else
 {
 item=start->data;
@@ -97,8 +104,15 @@ printf("\nItem %d deleted",item);
 }
 void deleteEnd(){
   int item;
-if(start==NULL)
+if(start==NULL){
 printf("\nUnderflow");
+return;
+}
+else if(start->forw==NULL)
+{
+    item=start->data;
+start=NULL;
+}
 else
 {
 struct node* tmp;
@@ -106,31 +120,38 @@ struct node* tmp;
  while(tmp->forw!=NULL){
      tmp=tmp->forw;
  }
-    item=tmp->data;
+item=tmp->data;
 tmp->backw->forw=NULL;
 tmp->backw=NULL;
 }
-printf("\nItem %d deleted",item);  
+printf("\nItem %d deleted",item);
 }
 void deleteNode(){
-      int item,value;
-if(start==NULL)
+      int item=-1,value;
+if(start==NULL){
 printf("\nUnderflow");
+return;
+}
+else if(start->forw==NULL)
+{
+    item=start->data;
+start=NULL;
+}
 else
 {
      printf("\nenter item to be deleted :");
  scanf("%d",&value);
-item=start->data;
+
 struct node* tmp;
  tmp=start;
  while(tmp->data!=value && tmp!=NULL){
      tmp=tmp->forw;
  }
-
+item=tmp->data;
 tmp->forw->backw=tmp->backw;
 tmp->backw->forw=tmp->forw;
 }
-printf("\nItem %d deleted",item);  
+printf("\nItem %d deleted",item);
 }
 
 void insert(){
@@ -181,7 +202,7 @@ int main()
 int ch;
     //printf("16115068 Sadanand Vishwas\n");
     do {
-       
+
         printf("\n1.Insertion");
         printf("\n2.Deletion");
         printf("\n3.Display");
@@ -199,3 +220,4 @@ int ch;
 
     return 0;
 }
+
