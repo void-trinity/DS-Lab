@@ -148,6 +148,7 @@ struct node* tmp;
      tmp=tmp->forw;
  }
 item=tmp->data;
+if(tmp->forw!=NULL)
 tmp->forw->backw=tmp->backw;
 tmp->backw->forw=tmp->forw;
 }
