@@ -157,11 +157,11 @@ printf("\nItem %d deleted",item);
 
 void insert(){
     int ch;
-    printf("\nwhere do you wanna insert ?");
+    
 printf("\n1.Insert at begining.");
 printf("\n2.Insert at end");
 printf("\n3.Insert after a given node");
-printf("\nenter your choice :");
+printf("\nwhere do you wanna insert ?");
 scanf("%d",&ch);
 switch(ch){
     case 1:insertBeg();break;
@@ -172,11 +172,11 @@ switch(ch){
 }
 void delete(){
         int ch;
-        printf("\nfrom where do you wanna delete ?");
+       
 printf("\n1.Delete from begining.");
 printf("\n2.Delete from end");
 printf("\n3.Delete  a given node");
-printf("\nenter your choice :");
+ printf("\nfrom where do you wanna delete ?");
 scanf("%d",&ch);
 switch(ch){
     case 1:deleteBeg();break;
