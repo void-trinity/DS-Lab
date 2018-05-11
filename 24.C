@@ -33,8 +33,6 @@ void traversal(struct node* node){
 }
 
 int main(){
-	printf("Program Made by Mohith Khatri\n");
-    printf("Roll Number : 16115043\n");
 	struct node *node1,*node2,*node3,*node4,*node5,*node6;
 	node1 = newNode(10);
 	node2 = newNode(20);
